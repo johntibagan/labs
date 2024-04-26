@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+ name: parksmap-ingress
+ annotations:
+   haproxy.router.openshift.io/rewrite-target: / 
+spec:
+ rules:
+   - host: parksmap-jtibagan-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com
+     http:
+       paths:
+         - path: /
+           pathType: Prefix 
+           backend:
+             service:
+                name: parksmap-service
+                port:
+                  number: 80
+

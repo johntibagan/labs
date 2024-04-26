@@ -76,7 +76,7 @@ spec:
              service:
                 name: parksmap-service
                 port:
-                  number: 80
+                  number: 8080
 
 ---
 apiVersion: autoscaling/v2

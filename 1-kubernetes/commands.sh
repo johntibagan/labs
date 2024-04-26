@@ -34,3 +34,5 @@ kubectl logs -l app=parksmap-deployment #-f
 
 
 # --- ALL apply - remove
+kubectl apply -f https://raw.githubusercontent.com/johntibagan/labs/main/1-kubernetes/all.yaml
+kubectl delete -f https://raw.githubusercontent.com/johntibagan/labs/main/1-kubernetes/all.yaml

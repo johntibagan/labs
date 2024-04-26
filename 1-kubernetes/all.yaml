@@ -1,9 +1,4 @@
 apiVersion: v1
-kind: Namespace
-metadata:
-  name: jtibagan-dev
----
-apiVersion: v1
 kind: Pod
 metadata:
   name: parksmap-pod

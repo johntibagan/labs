@@ -2,6 +2,9 @@
 kubectl apply -f https://raw.githubusercontent.com/johntibagan/labs/main/1-kubernetes/objects/FILE
 # kubectl delete -f https://raw.githubusercontent.com/johntibagan/labs/main/1-kubernetes/objects/FILE
 
+#namespace
+kubectl config set-context --current --namespace=jtibagan-dev
+
 kubectl get OBJECT
 kubectl describe OBJECT
 
@@ -11,8 +14,9 @@ kubectl get namespace john-dev #-o yaml
 kubectl describe namespace john-dev
 
 # ---------- pods
-kubectl get pods
+kubectl get pods #-o wide
 kubectl describe pod parksmap-pod
+kubectl exec -it <pod> -- <command>
 
 # ---------- deployments
 kubectl get deployments
@@ -55,3 +59,4 @@ ls -la  /mnt/data/
 # --- ALL apply - remove
 kubectl apply -f https://raw.githubusercontent.com/johntibagan/labs/main/1-kubernetes/all.yaml
 # kubectl delete -f https://raw.githubusercontent.com/johntibagan/labs/main/1-kubernetes/all.yaml
+

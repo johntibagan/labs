@@ -1,6 +1,6 @@
 # all
-kubectl delete -f https://raw.githubusercontent.com/johntibagan/labs/main/1-kubernetes/objects/1-namespace.yaml
-# kubectl delete -f https://raw.githubusercontent.com/johntibagan/labs/main/1-kubernetes/objects/#-FILE.yaml
+kubectl apply -f https://raw.githubusercontent.com/johntibagan/labs/main/1-kubernetes/objects/FILE
+# kubectl delete -f https://raw.githubusercontent.com/johntibagan/labs/main/1-kubernetes/objects/FILE
 
 kubectl get OBJECT
 kubectl describe OBJECT
